@@ -1,0 +1,12 @@
+version: '3'
+services:
+  neo4j:
+    image: neo4j:latest
+    environment:
+      - NEO4J_client_allow__telemetry=false
+      - NEO4J_AUTH=neo4j/your_password_here
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./configs:/conf
